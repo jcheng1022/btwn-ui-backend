@@ -5,7 +5,6 @@ const app = express();
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const Address = require('./models/address');
-const addressController = require('./controllers/address_controller');
 const admin = require('firebase-admin');
 
 
@@ -27,7 +26,6 @@ mongoose.connection
 
 //MIDDLEWARES
 app.use(cors());
-// app.use('/', isAuthenticated, addressController);
 app.use(express.json())
 app.use(morgan('dev'))
 
